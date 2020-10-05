@@ -13,7 +13,7 @@ git ls-remote -h origin | while read b; do PAGER='' git log -n1 --color --pretty
 git log -G "PARTE DO FONTE ALTERADO A SER LOCALIZADO" caminho/relativo/do/arquivo/arquivo.ext
 ```
 ```
-for c in $(git log -G "PROCEDURE PROCESSA_SOLICITACAO_ELETRONIC" --format=%H -- Medico/src/oracle/packages/TS_MASTER.TSS_INTEGRACAO_V030500_DDL.SQL); do
-    git --no-pager grep -e "PROCEDURE PROCESSA_SOLICITACAO_ELETRONIC" $c -- Medico/src/oracle/packages/TS_MASTER.TSS_INTEGRACAO_V030500_DDL.SQL
+for c in $(git log -G "PARTE DO FONTE ALTERADO A SER LOCALIZADO" --format=%H -- caminho/relativo/do/arquivo/arquivo.ext); do
+    git --no-pager grep -e "PARTE DO FONTE ALTERADO A SER LOCALIZADO" $c -- caminho/relativo/do/arquivo/arquivo.ext
 done
 ```
