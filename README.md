@@ -17,3 +17,8 @@ for c in $(git log -G "PARTE DO FONTE ALTERADO A SER LOCALIZADO" --format=%H -- 
     git --no-pager grep -e "PARTE DO FONTE ALTERADO A SER LOCALIZADO" $c -- caminho/relativo/do/arquivo/arquivo.ext
 done
 ```
+### Listar branchs aonde houve alteração de um arquivo especifico
+```
+git log --all --first-parent --remotes --reflog --author-date-order -- caminho/relativo/do/arquivo/arquivo.ext
+```
+
