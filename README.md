@@ -21,4 +21,10 @@ done
 ```
 git log --all --first-parent --remotes --reflog --author-date-order -- caminho/relativo/do/arquivo/arquivo.ext
 ```
-
+### Renomear um branch local e remoto
+```
+git checkout <nome_antigo>
+git branch -m <nome_novo>
+git push origin -u <nome_novo>
+git push origin --delete <nome_antigo>
+```
