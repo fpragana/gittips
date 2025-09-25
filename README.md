@@ -28,3 +28,10 @@ git branch -m <nome_novo>
 git push origin -u <nome_novo>
 git push origin --delete <nome_antigo>
 ```
+### Limpar branchs mergeados
+```
+git checkout main
+git pull origin main
+git branch --merged main | grep -v "^\*\\|main" | xargs -n 1 git branch -d
+git fetch -p
+```
